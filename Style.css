@@ -1,0 +1,562 @@
+/* --- Global Resets & Defaults --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #000;
+    color: #fff;
+    overflow-x: hidden; 
+}
+
+/* Background for register page */
+body.register-page {
+    background: linear-gradient(to bottom, #1a0000, #e60000);
+}
+
+/* Background for schedule page */
+body.schedule-page {
+    background: linear-gradient(to bottom, #1a0000, #e60000);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+/* --- Header & Navigation --- */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: #000;
+    position: sticky;
+    top: 0;          
+    z-index: 1000;   
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 50px; 
+    margin-right: 15px;
+}
+
+.logo-container span {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+nav ul {
+    display: flex;
+    gap: 30px; 
+}
+
+nav ul li a {
+    color: #fff;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    color: #e60000; 
+}
+
+/* --- Red Divider --- */
+.divider {
+    border: none;
+    height: 1px;
+    background-color: #e60000;
+    margin: 0;
+}
+
+/* --- Page Title (for Schedule page) --- */
+.page-title {
+    font-size: 2.2rem; 
+    /* UPDATED: Changed to white */
+    color: #fff; 
+    font-weight: bold;
+    text-transform: capitalize;
+    text-align: left;
+    
+    max-width: 1000px;
+    margin: 40px auto 30px auto;
+    padding: 0; 
+}
+
+
+/* --- Hero Section (index.html) --- */
+.hero-section {
+    background-image: url('hero-image.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: calc(100vh - 92px); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(20, 0, 0, 0.5), rgba(0, 0, 0, 0.7));
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-content h2 {
+    font-size: 3rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 1.25rem;
+    margin-bottom: 20px;
+}
+
+.hero-content .tagline {
+    font-size: 1rem;
+    margin-bottom: 30px;
+}
+
+.cta-button {
+    background-color: #e60000;
+    color: #fff;
+    padding: 15px 35px;
+    border: none;
+    border-radius: 30px; 
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #b30000; 
+}
+
+/* --- Form Container (register.html) --- */
+.form-container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 40px;
+    background-color: #222;
+    border-radius: 8px;
+    border: 1px solid #333;
+}
+
+.form-container h2 {
+    color: #fff;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2rem;
+}
+
+form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #aaa;
+}
+
+form input,
+form select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #444;
+    background-color: #fff; 
+    color: #000;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+form button.cta-button {
+    width: 100%; 
+    margin-top: 10px;
+}
+
+/* --- Animated Rainbow Text --- */
+.rainbow-text {
+    background: linear-gradient(270deg, #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #4b0082, #8f00ff, #ff0000);
+    background-size: 400% 400%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    animation: rainbow-animation 10s ease infinite;
+}
+
+@keyframes rainbow-animation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* --- Maintain Hover/Active State for Rainbow Nav --- */
+nav ul li a.rainbow-text:hover,
+nav ul li a.rainbow-text.active {
+    background: none;
+    -webkit-background-clip: initial;
+    -webkit-text-fill-color: initial;
+    color: #e60000;
+    animation: none;
+}
+
+
+/* --- Programs Section (index.html) --- */
+#programs {
+    background: linear-gradient(to bottom, #1a0000, #e60000);
+    padding: 60px 40px;
+    text-align: center;
+}
+
+#programs h2 {
+    font-size: 2.2rem; 
+    color: #e60000;
+    margin-bottom: 40px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.program-cards-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap; 
+}
+
+.program-card {
+    background-color: #111; 
+    border-radius: 8px;
+    overflow: hidden; 
+    width: 350px; 
+    text-align: left;
+    border: 1px solid #333;
+    transition: transform 0.3s ease;
+}
+
+.program-card:hover {
+    transform: translateY(-10px); 
+}
+
+.program-card img {
+    width: 100%;
+    height: 200px; 
+    object-fit: cover; 
+}
+
+.program-card h3 {
+    font-size: 1.5rem;
+    color: #e60000;
+    padding: 20px 20px 10px 20px;
+}
+
+.program-card p {
+    font-size: 1rem;
+    color: #aaa; 
+    padding: 0 20px 20px 20px;
+    line-height: 1.6;
+}
+
+/* --- Footer Section (All Pages) --- */
+footer {
+    background: linear-gradient(to bottom, #1a0000, #e60000); 
+    color: #aaa;
+    padding-top: 60px; 
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; 
+    gap: 30px;
+    padding: 0 40px; 
+}
+
+.footer-column {
+    flex-basis: 30%; 
+    min-width: 250px; 
+}
+
+.footer-column h4 {
+    color: #fff;
+    font-size: 1.25rem;
+    margin-bottom: 20px;
+}
+
+.footer-column p {
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+.footer-column a {
+    color: #aaa;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-column a:hover {
+    color: #fff; 
+}
+
+.footer-column i {
+    width: 20px; 
+    margin-right: 10px;
+    color: #e60000; 
+}
+
+/* --- Copyright Section styles (All Pages) --- */
+.copyright-section {
+    text-align: center;
+    padding: 30px 40px;
+    color: #ddd; 
+}
+
+.copyright-section hr {
+    border: none;
+    height: 1px;
+    background-color: #ff5555; 
+    margin-bottom: 30px;
+}
+
+/* --- Mentors Section (trainers.html) --- */
+#mentors {
+    background: linear-gradient(to bottom, #1a0000, #e60000);
+    padding: 60px 40px;
+    text-align: center;
+}
+
+#mentors h2 {
+    font-size: 2.2rem; 
+    color: #fff; 
+    margin-bottom: 40px;
+    font-weight: bold;
+    text-transform: capitalize; 
+}
+
+.mentor-cards-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap; 
+}
+
+.mentor-card {
+    background-color: #111; 
+    border-radius: 8px;
+    overflow: hidden; 
+    width: 350px; 
+    border: 1px solid #333;
+    transition: transform 0.3s ease;
+}
+
+.mentor-card:hover {
+    transform: translateY(-10px); 
+}
+
+.mentor-card img {
+    width: 100%;
+    height: 400px; 
+    object-fit: cover;
+    object-position: center;
+}
+
+.mentor-card h3 {
+    font-size: 1.5rem;
+    /* UPDATED: Changed to red */
+    color: #e60000; 
+    padding: 20px 20px 10px 20px;
+    text-align: center;
+}
+
+.mentor-card p {
+    font-size: 1rem;
+    color: #aaa; 
+    padding: 0 20px 20px 20px;
+    line-height: 1.6;
+    text-align: center;
+}
+
+
+/* --- Slider Section (schedule.html) --- */
+#schedule-slider {
+    max-width: 1000px;
+    position: relative;
+    margin: 0 auto 30px auto; 
+    border: 4px solid #e60000;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.slider-container {
+    position: relative;
+    width: 100%;
+    height: 500px;
+}
+
+.slide {
+    display: none;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+.slide-text {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 15px 25px;
+    border-radius: 8px;
+    text-align: center;
+    width: 80%;
+}
+
+.slide-text h3 {
+    font-size: 1.8rem;
+    color: #e60000;
+    margin-bottom: 10px;
+}
+
+.slide-text p {
+    font-size: 1.1rem;
+    color: #ddd;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 24px;
+    transition: 0.3s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(230, 0, 0, 0.8);
+}
+
+.dots-container {
+    text-align: center;
+    padding: 15px;
+    background-color: #111;
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 5px;
+    background-color: #555;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.active, .dot:hover {
+    background-color: #e60000;
+}
+
+.slide-fade {
+  animation-name: slide-fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes slide-fade {
+  from { opacity: .4; }
+  to { opacity: 1; }
+}
+
+
+/* --- Schedule Table Section (schedule.html) --- */
+#schedule-table {
+    padding: 30px 40px 60px 40px;
+    text-align: center;
+}
+
+.schedule-table-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    overflow-x: auto;
+    border: 2px solid #e60000;
+    border-radius: 8px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #111;
+    color: #fff;
+}
+
+th, td {
+    padding: 15px;
+    border: 1px solid #333;
+    text-align: center;
+}
+
+th {
+    background-color: #e60000;
+    color: #fff;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+}
+
+td {
+    font-size: 1.1rem;
+    color: #aaa;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #222;
+}
+
+tbody tr:hover {
+    background-color: #333;
+}
