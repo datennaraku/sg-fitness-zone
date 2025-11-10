@@ -47,10 +47,10 @@ while allowing users to register for a free trial class online.
 ## 🖼️ Pages Overview
 | Page | Description |
 |------|--------------|
-| **Index.html** | Home page – introduction, hero section, and program highlights. |
-| **Trainers.html** | Profiles of trainers using Bootstrap cards. |
-| **Schedule.html** | Weekly workout schedule with an image slider. |
-| **Register.html** | Registration form with JavaScript validation and Bootstrap modal. |
+| **index.html** | Home page – introduction, hero section, and program highlights. |
+| **trainers.html** | Profiles of trainers using Bootstrap cards. |
+| **schedule.html** | Weekly workout schedule with an image slider. |
+| **register.html** | Registration form with JavaScript validation and Bootstrap modal. |
 | **credits.html** | Ethical credits and project team details. |
 
 ---
@@ -69,5 +69,6 @@ while allowing users to register for a free trial class online.
 📞 +60 123-456 789  
 
 ---
+
 
 © 2025 **SG FITNESS ZONE**. All rights reserved.
