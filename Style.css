@@ -560,3 +560,48 @@ tbody tr:nth-child(even) {
 tbody tr:hover {
     background-color: #333;
 }
+
+/* === Mobile-only fixes (keep original look) === */
+@media (max-width: 576px) {
+  /* put nav under the logo so it never overflows */
+  header {
+    flex-wrap: wrap;              /* allow next line */
+    padding: 12px 16px;           /* a bit tighter */
+  }
+  nav {
+    width: 100%;                  /* nav takes full row below logo */
+    margin-top: 8px;
+  }
+  nav ul {
+    flex-wrap: wrap;              /* wrap links instead of overflowing */
+    justify-content: space-between;
+    gap: 10px 14px;               /* smaller gaps on mobile */
+  }
+  nav ul li a {
+    font-size: 0.92rem;           /* slightly smaller text so it fits */
+  }
+  .logo { height: 42px; }         /* scale logo a bit on mobile */
+  .logo-container span {
+    font-size: 1.05rem;           /* keep brand text readable but compact */
+    line-height: 1.1;
+  }
+
+  /* hero text scales so it doesn’t push sideways */
+  .hero-content h2 {
+    font-size: clamp(1.6rem, 8vw, 2.2rem);
+    line-height: 1.15;
+  }
+  .hero-content p { font-size: 0.95rem; }
+  .cta-button { padding: 12px 22px; font-size: 1rem; }
+
+  /* keep hero comfortable height on small screens */
+  .hero-section {
+    height: auto;                 /* remove forced full height */
+    min-height: calc(100vh - 56px);
+    padding: 32px 16px;
+  }
+
+  /* program cards: 1 per row on tight widths */
+  .program-cards-container { gap: 20px; }
+  .program-card { width: 100%; max-width: 360px; margin: 0 auto; }
+}
