@@ -38,7 +38,7 @@ while allowing users to register for a free trial class online.
 |------|---------|
 | Project Leader | Suganthan A/L Tanggarachai |
 | UI Designer | Muhammad Luqman Bin Mohd.Fauzi |
-| Front-End Developer | Shah Arif Bin Suward |
+| Front-End Developer | Shah Arif Bin Suwardi |
 | Document Writer | Muhammad Hidayat Bin Nazrul |
 
 
@@ -72,4 +72,5 @@ while allowing users to register for a free trial class online.
 
 
 © 2025 **SG FITNESS ZONE**. All rights reserved.
+
 
